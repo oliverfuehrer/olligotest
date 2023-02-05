@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	ollip "example.com/olligotest/ollipackage"
 	"rsc.io/quote"
@@ -13,5 +14,6 @@ func main() {
 
 	fmt.Println(quote.Opt())
 
+	log.Println("Start HTTP-Server ...")
 	ollip.StartHttp()
 }
