@@ -1,7 +1,10 @@
 package ollipackage
 
-//var helloText = "HelloText"
+import "strconv"
+
+var sum int = 0
 
 func internalText() string {
-	return "helloText"
+	sum++
+	return "helloText: " + strconv.Itoa(sum)
 }

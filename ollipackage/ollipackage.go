@@ -1,5 +1,5 @@
 package ollipackage
 
-func ZeigeOlliText2() string {
+func ZeigeBeispielA() string {
 	return "from 2:" + internalText()
 }
