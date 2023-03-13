@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	
+
 	fmt.Println(ollipackage.ZeigeBeispielA())
 	fmt.Println(ollipackage.ZeigeBeispielB())
 
@@ -18,12 +18,14 @@ func main() {
 
 	log.Println("Start HTTP-Server ...")
 
-	go func() {
-		for {
-			log.Println("Inline thread is running and repeating ...")
-			time.Sleep(1 * time.Second)
-		}
-	}()
+	go runningAndRepeating()
 
 	ollipackage.StartHttp()
+}
+
+func runningAndRepeating() {
+	for {
+		log.Println("Inline thread is running and repeating ...")
+		time.Sleep(1 * time.Second)
+	}
 }
